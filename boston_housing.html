@@ -12390,6 +12390,9 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> When the model is trained with a maximum depth of 1, the model suffers from high bias. Since it is on depth 1, it does not know the dataset very much, so it is biased. If model is trained with a maximum depth of 10, they get move away from each other so it seems like this is high variance.</p>
+<p>1)If we encounter a high-biased model, since it is under-fitting, we should obtain new features for model. (1)</p>
+<p>2)If we encounter a high-variance model, it is over-fitting. we should get more training examples and fit it to model or decrease feature set. (1)</p>
+<p>(1) <a href="https://followthedata.wordpress.com/2012/06/02/practical-advice-for-machine-learning-bias-variance/">https://followthedata.wordpress.com/2012/06/02/practical-advice-for-machine-learning-bias-variance/</a></p>
 
 </div>
 </div>
@@ -12444,6 +12447,9 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> Grid search technique can be used when there is more than one hyper parameter for given model to reveal best combination of these hyper parameters. After we train each combinations, we use evaluation metrics for scoring each combination and according to results, we choose best one. Here 'grid' corresponds to table in which all possible hyper parameter combinations exist.</p>
+<p>Evaluation metric for classification is accuracy.
+Evaluation metrics for regression are r-square and sum of squared error.</p>
+<p>As given on a quiz, when we come up with two data distribution in which both have similar fit but one has less data; one with more data points gave us bigger sum of squared errors compared to other. So in this situation we can use r squared because it doesn't have this shortcoming. It is independent of data points and gives score in interval of 0-1 so it is more reliable than sum of squared errors.</p>
 
 </div>
 </div>
@@ -12723,6 +12729,11 @@ Predicted selling price for Client 3&#39;s home: $931,636.36
 <p>for client 3, prediction is a bit low. Since client 3 has best house according to features like size of home, neighborhood of best school etc. (client 3 has has the biggest house, in the best public school neighborhood with the lowest poverty level), price should be more than maximum price which is $1024800.00. But predicted selling price for Client 3's home which is 931636.36 seems some reasonable.</p>
 <p>for client 2, prediction is a bit high i think. since client 2 has lower featured house.(client 2 has the smallest house, in a neighborhood with a relatively high poverty rate and not the best public schools.), price should be about 200000 (also according to histogram). Predicted selling price for Client 2's home which is $237,478.72 seems also some reasonable.</p>
 <p>For client 1, prediction is reasonable i think. since client 1's house's features are average according to other clients' one. Predicted selling price for Client 1's home which is $403,025.00 seems reasonable according to mean price which is 454342.94 and histogram.</p>
+<p>Regarding to relationship of dv and iv; dependent variable has a dependency to independent variable. When independent variable changes 'dependent' variable is affected from that. So that it is called as dependent. (1)
+If there is a high non-linearity &amp; complex relationship between dependent &amp; independent variables, a tree model will outperform a classical regression method. (2) Decision tree method simplifies complex relationships between input variables and target variables by dividing original input variables into significant subgroups. (3)</p>
+<p>(1) <a href="https://www.thoughtco.com/independent-and-dependent-variables-differences-606115">https://www.thoughtco.com/independent-and-dependent-variables-differences-606115</a></p>
+<p>(2) <a href="https://clearpredictions.com/Home/DecisionTree">https://clearpredictions.com/Home/DecisionTree</a></p>
+<p>(3) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4466856/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4466856/</a></p>
 
 </div>
 </div>
